@@ -5,9 +5,14 @@ project(InkMLtk)
 file( GLOB InkMLtk_SRCS  "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp" )
 file( GLOB InkMLtk_HEADS "${CMAKE_CURRENT_SOURCE_DIR}/include/inkmllib/*.h" )
 
+# TinyXml (local)
+add_subdirectory(libtinyxml)
+
+
 # Include
 set( System_INC /usr/include/)
 set( INCLUDE "${CMAKE_CURRENT_SOURCE_DIR}/include/inkmllib" )
+
 
 # include_directories( SYSTEM ${System_INC} )
 include_directories( ${INCLUDE} )
@@ -26,7 +31,7 @@ INSTALL( FILES ${InkMLtk_HEADS} DESTINATION include/ )
 
 
 add_executable( sample_test ${CMAKE_CURRENT_SOURCE_DIR}/sample_test/sample_test.cpp )
-target_link_libraries( sample_test inkmltk tinyxml )
+target_link_libraries( sample_test inkmltk TinyXml )
 
 
 
