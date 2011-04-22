@@ -5,8 +5,6 @@ project(InkMLtk)
 file( GLOB InkMLtk_SRCS  "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp" )
 file( GLOB InkMLtk_HEADS "${CMAKE_CURRENT_SOURCE_DIR}/include/inkmllib/*.h" )
 
-set(LIBRARY_OUTPUT_PATH lib/${CMAKE_BUILD_TYPE})
-
 # Include
 set( System_INC /usr/include/)
 set( INCLUDE "${CMAKE_CURRENT_SOURCE_DIR}/include/inkmllib" )
@@ -14,7 +12,6 @@ set( INCLUDE "${CMAKE_CURRENT_SOURCE_DIR}/include/inkmllib" )
 # include_directories( SYSTEM ${System_INC} )
 include_directories( ${INCLUDE} )
 
-INSTALL( FILES ${InkMLtk_HEADS} DESTINATION include/ )
 
 # Shared
 add_library( inkmltk SHARED ${InkMLtk_SRCS} )
@@ -24,9 +21,13 @@ INSTALL( FILES ${CMAKE_CURRENT_BINARY_DIR}/lib/libinkmltk.so DESTINATION lib/ )
 # add_library( inkmltk ${InkMLtk_SRCS} )
 # INSTALL( FILES ${CMAKE_CURRENT_BINARY_DIR}/lib/libinkmltk.a DESTINATION lib/ )
 
+# Install headers 
+INSTALL( FILES ${InkMLtk_HEADS} DESTINATION include/ )
 
 
-# SET_TARGET_PROPERTIES( inkmltk PROPERTIES DEFINE_SYMBOL "EXPORT" )
+add_executable( sample_test ${CMAKE_CURRENT_SOURCE_DIR}/sample_test/sample_test.cpp )
+target_link_libraries( sample_test inkmltk tinyxml )
+
 
 
 # uninstall target
