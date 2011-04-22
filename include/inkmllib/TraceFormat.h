@@ -31,6 +31,10 @@
  * DATE:       24th July 2007
  * Author		Date			Description of change
  ************************************************************************/
+
+#ifndef __TRACEFORMAT_H
+#define __TRACEFORMAT_H
+
 #pragma once
 
 #include <vector>
@@ -75,3 +79,5 @@ public:
 	void addChannelOrder(char *c);
 	void initializeFromXMLNode(TiXmlNode *node);
 };
+
+#endif // __TRACEFORMAT_H

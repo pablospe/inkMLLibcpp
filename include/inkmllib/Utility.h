@@ -36,6 +36,10 @@
  *                                 Renderer class.
  *                              2. Global functions move to GlobalFunction class   
  ************************************************************************/
+
+#ifndef __UTILITY_H
+#define __UTILITY_H
+
 #pragma once
 
 #include <string.h>
@@ -43,8 +47,6 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <vector>
-
-using namespace std;
 
 #define SUCCESS true
 
@@ -82,4 +84,4 @@ public:
 	static char* toLower(char *s);
 };
 
-
+#endif // __UTILITY_H

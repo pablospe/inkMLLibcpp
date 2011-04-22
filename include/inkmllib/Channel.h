@@ -36,6 +36,9 @@
  * Balaji M N A 18-June-08      Moved class definition methods in .cpp file.
  ************************************************************************/
 
+#ifndef __CHANNEL_H
+#define __CHANNEL_H
+
 #pragma once
 #include <string.h>
 
@@ -69,3 +72,6 @@ public:
 private:
 	INKML_UNITS getUnit(char *units);
 };
+
+
+#endif // __CHANNEL_H

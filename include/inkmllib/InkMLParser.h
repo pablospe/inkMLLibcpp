@@ -34,6 +34,10 @@
  * Author		Date			Description of change
  * Balaji M N A 18-June-08      Moved class definition methods in .cpp file.
  ************************************************************************/
+
+#ifndef __INKMLPARSER_H
+#define __INKMLPARSER_H
+
 #pragma once
 
 #include "Ink.h"
@@ -46,3 +50,6 @@ public:
 	Ink* parse(char *inkMLData, InkMLError *retCode);
 	void insertTrace(TiXmlNode *child, Ink *objInk);
 };
+
+
+#endif // __INKMLPARSER_H

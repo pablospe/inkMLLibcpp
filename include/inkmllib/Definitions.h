@@ -34,6 +34,10 @@
  * Author		Date			Description of change
  * Muthu	   17-June-08		Added comment statements
  ************************************************************************/
+
+#ifndef __DEFINITIONS_H
+#define __DEFINITIONS_H
+
 #pragma once
 
 #include "TraceFormat.h"
@@ -89,3 +93,5 @@ public:
 	}
 
 };
+
+#endif  // __DEFINITIONS_H

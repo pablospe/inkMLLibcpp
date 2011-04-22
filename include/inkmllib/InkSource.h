@@ -34,6 +34,10 @@
  * Author		Date			Description of change
  * Muthu	   17-June-08		Added comment statements
  ************************************************************************/
+
+#ifndef __INKSOURCE_H
+#define __INKSOURCE_H
+
 #pragma once
 
 #include "TraceFormat.h"
@@ -55,3 +59,5 @@ public:
 		this->traceFormat = traceFormat;
 	}
 };
+
+#endif // __INKSOURCE_H

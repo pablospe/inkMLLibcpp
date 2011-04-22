@@ -35,6 +35,9 @@
  * Author		Date			Description of change
  * Muthu	   17-June-08		Added comment statements
  ************************************************************************/
+#ifndef __INK_H
+#define __INK_H
+
 #pragma once
 
 #include "Definitions.h"
@@ -96,3 +99,5 @@ public:
 	**/	
 	void normalizeTracePoint(long width, long height);
 };
+
+#endif // __INK_H

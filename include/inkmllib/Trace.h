@@ -35,6 +35,10 @@
  * Muthu	   17-June-08		Added comment statements
  * Balaji M N A 18-June-08      Moved class definition methods in .cpp file.
  ************************************************************************/
+
+#ifndef __TRACE_H
+#define __TRACE_H
+
 #pragma once
 
 #include "Utility.h"
@@ -87,3 +91,4 @@ public:
 	void parseTraceData(char *data, BoundingBox *boundingBox);
 };
 
+#endif // __TRACE_H
